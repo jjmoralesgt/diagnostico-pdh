@@ -16,6 +16,7 @@ class SucursalController extends Controller
     }
 
     public function create(Request $request){
+        
         $sucursal = Sucursal::create($request->all());
         return response()->json($sucursal, 201);
     }
