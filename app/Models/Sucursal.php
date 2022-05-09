@@ -12,4 +12,12 @@ class Sucursal extends Model
     protected $table = 'sucursal';
 
     protected $primaryKey = 'id';
+
+    protected $fillable = [
+        'nombre',
+        'nombre_admin',
+        'telefono',
+        'direccion',
+        'fax',
+        'cantidad_pedidos' ];
 }
