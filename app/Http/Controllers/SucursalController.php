@@ -8,7 +8,7 @@ use App\Models\Sucursal;
 class SucursalController extends Controller
 {
     public function index(){
-        return Sucursal::all();
+        return Sucursal::all()->sortByDesc('id')->values();
     }
 
     public function show(Sucursal $sucursal){

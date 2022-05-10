@@ -22,6 +22,7 @@ class CreateSucursalTable extends Migration
             $table->string('fax');
             $table->integer('cantidad_pedidos');            
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

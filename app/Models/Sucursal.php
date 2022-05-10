@@ -4,14 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Sucursal extends Model
 {
-    use HasFactory;
-    
+    use HasFactory, SoftDeletes;
+
     protected $table = 'sucursal';
 
     protected $primaryKey = 'id';
+
+    protected $dates = ['deleted_at'];
 
     protected $fillable = [
         'nombre',
@@ -19,5 +22,6 @@ class Sucursal extends Model
         'telefono',
         'direccion',
         'fax',
-        'cantidad_pedidos' ];
+        'cantidad_pedidos'
+    ];    
 }
